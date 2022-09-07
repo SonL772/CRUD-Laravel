@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
-    @section('content')
-    <div class="container">
-    <a class="btn btn-success" href="/post/create">Create Post</a>
+    @section('content')<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Post') }}</div>
+
+                <div class="card-body">
+                <a class="btn btn-success" href="/post/create">Create Post</a>
     <table class="table table-hover">
         <tr>
             <th>Id</th>
@@ -30,6 +35,10 @@
         </tr>
         @endforeach
     </table>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 @endsection
 

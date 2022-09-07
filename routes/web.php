@@ -25,12 +25,14 @@ Route::get('/', function(){
 });
 
 
+Route::middleware(['auth'])->group(function(){
     Route::get('/post',[postController::class,'index']);
     Route::get('/post/create',[postController::class,'create']);
     Route::post('/post/store',[postController::class,'store']);
     Route::get('/post/{id}/edit',[postController::class,'edit']);
     Route::put('/post/{id}',[postController::class,'update']);
     Route::delete('/post/{id}',[postController::class,'delete']);
+});
 
 
 Auth::routes();
